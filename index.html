@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ColorFit Garments</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      background: linear-gradient(135deg, #ffe0e9, #e0f7fa);
+      color: #333;
+      overflow-x: hidden;
+    }
+    header {
+      background-color: #ff4081;
+      color: white;
+      padding: 20px 40px;
+      text-align: center;
+      animation: slideDown 1s ease-out;
+    }
+    @keyframes slideDown {
+      from { transform: translateY(-100%); }
+      to { transform: translateY(0); }
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      background: #fff;
+      padding: 10px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    nav a {
+      text-decoration: none;
+      color: #ff4081;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      color: #00bcd4;
+    }
+    section {
+      padding: 60px 40px;
+      animation: fadeIn 1.5s;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    h2 {
+      color: #ff4081;
+      margin-bottom: 20px;
+      font-size: 2em;
+    }
+    .products, .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 15px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+    .card img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+    footer {
+      background: #ff4081;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>ColorFit Garments</h1>
+    <p>Bright. Bold. Beautiful Clothing.</p>
+  </header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#products">Products</a>
+    <a href="#gallery">Gallery</a>
+  </nav>
+
+  <section id="home">
+    <h2>Welcome to ColorFit</h2>
+    <p>Your one-stop shop for trendy and colorful garments for all seasons!</p>
+  </section>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>We are a passionate clothing brand focused on vibrant designs and quality fabrics. At ColorFit, fashion meets comfort.</p>
+  </section>
+
+  <section id="products" class="products">
+    <h2>Our Products</h2>
+    <div class="card">
+      <img src="https://via.placeholder.com/200x200?text=Kurti" alt="Kurti">
+      <p>Stylish Kurtis</p>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/200x200?text=Shirts" alt="Shirts">
+      <p>Casual Shirts</p>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/200x200?text=Jeans" alt="Jeans">
+      <p>Trendy Jeans</p>
+    </div>
+  </section>
+
+  <section id="gallery" class="gallery">
+    <h2>Gallery</h2>
+    <img class="card" src="https://via.placeholder.com/200x200?text=Outfit+1" alt="Gallery 1">
+    <img class="card" src="https://via.placeholder.com/200x200?text=Outfit+2" alt="Gallery 2">
+    <img class="card" src="https://via.placeholder.com/200x200?text=Outfit+3" alt="Gallery 3">
+  </section>
+
+  <footer>
+    <p>&copy; 2025 ColorFit Garments. All rights reserved.</p>
+  </footer>
+</body>
+</html>
